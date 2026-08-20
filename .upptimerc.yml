@@ -27,14 +27,11 @@ sites:
     expectedStatusCodes:
       - 200
 
-  # WedChapter is currently behind Vercel pre-launch protection. Accept the
-  # protected response until a public health endpoint is available.
   - name: WedChapter
     slug: wedchapter
     url: https://www.wedchapter.com/
     expectedStatusCodes:
       - 200
-      - 403
 
   - name: Leedon
     slug: leedon
