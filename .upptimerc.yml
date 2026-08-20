@@ -31,7 +31,7 @@ status-website:
   introMessage: Current availability, response-time history, and incident updates for customer-facing applications.
   navbar:
     - title: Status
-      href: /
+      href: /status/
     - title: Website
       href: https://www.nathanmillar.co.uk/
     - title: Client portal
