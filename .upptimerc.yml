@@ -10,12 +10,14 @@ sites:
   - name: Portfolio website
     slug: portfolio
     url: https://www.nathanmillar.co.uk/
+    icon: https://status.nathanmillar.co.uk/nm-favicon.svg
     expectedStatusCodes:
       - 200
 
   - name: Client portal
     slug: client-portal
     url: https://portal.nathanmillar.co.uk/api/health
+    icon: https://status.nathanmillar.co.uk/nm-favicon.svg
     expectedStatusCodes:
       - 200
 
@@ -30,14 +32,19 @@ assignees:
 
 status-website:
   cname: status.nathanmillar.co.uk
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Nathan Millar Service Status
-  introTitle: "**Service availability for Nathan Millar applications.**"
-  introMessage: Current availability, response-time history, and incident updates for customer-facing applications.
+  themeUrl: https://status.nathanmillar.co.uk/nathan-millar-theme.css
+  logoUrl: https://status.nathanmillar.co.uk/nm-logo.svg
+  faviconSvg: https://status.nathanmillar.co.uk/nm-favicon.svg
+  name: Nathan Millar Status
+  introTitle: "**All Nathan Millar systems, at a glance.**"
+  introMessage: Live availability and response-time history for the Nathan Millar website and client portal. If we detect an interruption, updates will be posted here.
   navbar:
     - title: Status
       href: /
-    - title: Website
+    - title: Nathan Millar
       href: https://www.nathanmillar.co.uk/
     - title: Client portal
       href: https://portal.nathanmillar.co.uk/
+
+i18n:
+  footer: "Nathan Millar service monitoring · Powered by [Upptime](https://upptime.js.org) · [View source]($REPO)"
