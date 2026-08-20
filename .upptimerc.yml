@@ -21,9 +21,31 @@ sites:
     expectedStatusCodes:
       - 200
 
-# The full check includes Neon, so run it every 30 minutes to leave room for
-# the database to scale to zero. A separate workflow checks the portfolio
-# website every 5 minutes.
+  - name: Meet The Millars
+    slug: meet-the-millars
+    url: https://www.meetthemillars.com/
+    expectedStatusCodes:
+      - 200
+
+  # WedChapter is currently behind Vercel pre-launch protection. Accept the
+  # protected response until a public health endpoint is available.
+  - name: WedChapter
+    slug: wedchapter
+    url: https://www.wedchapter.com/
+    expectedStatusCodes:
+      - 200
+      - 403
+
+  - name: Leedon
+    slug: leedon
+    url: https://www.leedon.co.uk/
+    expectedStatusCodes:
+      - 200
+
+# The full check includes Neon and all customer-facing applications, so run it
+# every 30 minutes to keep traffic modest and leave room for the database to
+# scale to zero. A separate workflow checks the portfolio website every
+# 5 minutes.
 workflowSchedule:
   uptime: "2,32 * * * *"
 
@@ -37,7 +59,7 @@ status-website:
   faviconSvg: https://status.nathanmillar.co.uk/nm-favicon.svg
   name: Nathan Millar Status
   introTitle: "**All Nathan Millar systems, at a glance.**"
-  introMessage: Live availability and response-time history for the Nathan Millar website and client portal. If we detect an interruption, updates will be posted here.
+  introMessage: Live availability and response-time history for Nathan Millar websites and applications. If we detect an interruption, updates will be posted here.
   navbar:
     - title: Status
       href: /
