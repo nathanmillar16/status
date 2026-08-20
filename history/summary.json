@@ -19,7 +19,7 @@
   },
   {
     "name": "Client portal",
-    "url": "https://portal.nathanmillar.co.uk/",
+    "url": "https://portal.nathanmillar.co.uk/api/health",
     "icon": "https://icons.duckduckgo.com/ip3/portal.nathanmillar.co.uk.ico",
     "slug": "client-portal",
     "status": "up",
