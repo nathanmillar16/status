@@ -1,0 +1,281 @@
+:root {
+  color-scheme: dark;
+  --body-background-color: #07131f;
+  --body-text-color: #f1f5f9;
+  --card-background-color: rgba(13, 27, 42, 0.94);
+  --nav-background-color: rgba(7, 19, 31, 0.94);
+  --nav-border-bottom-color: rgba(255, 122, 0, 0.3);
+  --nav-current-border-bottom-color: #ff7a00;
+  --card-border-color: rgba(148, 163, 184, 0.2);
+  --down-border-left-color: #fb7185;
+  --down-background-color: rgba(190, 24, 93, 0.18);
+  --degraded-border-left-color: #fbbf24;
+  --up-border-left-color: #34d399;
+  --tag-color: #07131f;
+  --tag-up-background-color: #34d399;
+  --tag-down-background-color: #fb7185;
+  --tag-degraded-background-color: #fbbf24;
+  --change-background-color: #ffb066;
+  --error-button-border-color: #ff7a00;
+  --error-button-background-color: #ff7a00;
+  --error-button-color: #07131f;
+  --submit-button-border-color: #ff7a00;
+  --submit-button-background-color: #ff7a00;
+  --submit-button-color: #07131f;
+  --graph-opacity: 0.8;
+  --graph-filter: saturate(0.7) hue-rotate(305deg);
+}
+
+html {
+  min-height: 100%;
+  background: #07131f;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(241, 245, 249, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(241, 245, 249, 0.025) 1px, transparent 1px),
+    radial-gradient(circle at 15% 0%, rgba(255, 122, 0, 0.13), transparent 28rem),
+    linear-gradient(180deg, #07131f 0%, #091725 100%);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+  color: var(--body-text-color);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body::after {
+  position: fixed;
+  inset: auto -8rem -12rem auto;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background: rgba(255, 122, 0, 0.06);
+  content: "";
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.container {
+  max-width: 940px;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom-width: 1px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(16px);
+}
+
+nav .container {
+  max-width: 1040px;
+}
+
+nav a {
+  color: #cbd5e1;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible,
+nav [aria-current] {
+  color: #ffffff;
+}
+
+nav a:not(.logo):hover,
+nav a:not(.logo):focus-visible {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+nav .logo {
+  color: #f8fafc;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+nav .logo img {
+  width: 3.25rem;
+  height: 2.25rem;
+  border-radius: 0;
+  object-fit: contain;
+}
+
+main.container {
+  padding-top: clamp(2.5rem, 7vw, 5rem);
+  padding-bottom: 2rem;
+}
+
+main header {
+  position: relative;
+  max-width: 760px;
+  margin-bottom: 2.5rem;
+  padding-top: 1.6rem;
+}
+
+main header::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ff9a3d;
+  content: "SERVICE STATUS";
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+main header h1 {
+  max-width: 720px;
+  margin-bottom: 0.8rem;
+  color: #f8fafc;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.03;
+}
+
+main header p.lead {
+  max-width: 680px;
+  margin: 0;
+  color: #b8c4d1;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+h2,
+h3,
+h4 {
+  color: #f8fafc;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+article {
+  border-radius: 0.8rem;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
+main > article.up:first-of-type {
+  border-color: rgba(52, 211, 153, 0.34);
+  background: linear-gradient(90deg, rgba(52, 211, 153, 0.14), rgba(13, 27, 42, 0.92));
+  color: #d1fae5;
+  font-weight: 650;
+}
+
+.live-status article {
+  min-height: 4.5rem;
+  padding: 1.2rem 1.35rem;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.live-status article:hover {
+  border-color: rgba(255, 122, 0, 0.46);
+  transform: translateY(-1px);
+}
+
+.live-status h4 {
+  margin-bottom: 0.45rem;
+  font-size: 1rem;
+}
+
+form label {
+  display: inline-block;
+  min-width: 2rem;
+  padding: 0.25rem 0.45rem;
+  border-radius: 0.35rem;
+  color: #94a3b8;
+  cursor: pointer;
+  text-align: center;
+  transition: color 160ms ease, background-color 160ms ease;
+}
+
+form input:checked + label,
+form label:hover {
+  background: rgba(255, 122, 0, 0.12);
+  color: #ffb066;
+}
+
+footer {
+  max-width: 940px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1.5rem 2rem 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.14);
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+footer a {
+  color: #cbd5e1;
+  text-underline-offset: 0.2em;
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: #ffb066;
+}
+
+@media (max-width: 700px) {
+  nav {
+    position: static;
+  }
+
+  nav .container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.45rem 1.1rem 0;
+  }
+
+  nav .logo {
+    float: none;
+    margin-right: 0;
+    padding: 0.45rem 0;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+
+  nav a:not(.logo) {
+    padding: 0.75rem 1rem;
+  }
+
+  nav li:first-child a {
+    padding-left: 0;
+  }
+
+  main.container {
+    padding: 2.8rem 1.2rem 1rem;
+  }
+
+  main header h1 {
+    font-size: 2.35rem;
+  }
+
+  .live-status article {
+    padding: 1rem;
+  }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
