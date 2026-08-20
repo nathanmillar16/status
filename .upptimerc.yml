@@ -24,14 +24,14 @@ assignees:
   - nathanmillar16
 
 status-website:
-  baseUrl: /status
+  cname: status.nathanmillar.co.uk
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: Nathan Millar Service Status
   introTitle: "**Service availability for Nathan Millar applications.**"
   introMessage: Current availability, response-time history, and incident updates for customer-facing applications.
   navbar:
     - title: Status
-      href: /status/
+      href: /
     - title: Website
       href: https://www.nathanmillar.co.uk/
     - title: Client portal
