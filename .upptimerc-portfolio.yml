@@ -1,0 +1,17 @@
+owner: nathanmillar16
+repo: status
+user-agent: nathanmillar16
+
+secrets: []
+
+# Used by the portfolio-only workflow so this static endpoint can be checked
+# frequently without also waking the client portal database.
+sites:
+  - name: Portfolio website
+    slug: portfolio
+    url: https://www.nathanmillar.co.uk/
+    expectedStatusCodes:
+      - 200
+
+assignees:
+  - nathanmillar16

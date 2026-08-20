@@ -13,12 +13,17 @@ sites:
     expectedStatusCodes:
       - 200
 
-  # This will move to /api/health once the database-aware endpoint is deployed.
   - name: Client portal
     slug: client-portal
-    url: https://portal.nathanmillar.co.uk/
+    url: https://portal.nathanmillar.co.uk/api/health
     expectedStatusCodes:
       - 200
+
+# The full check includes Neon, so run it every 30 minutes to leave room for
+# the database to scale to zero. A separate workflow checks the portfolio
+# website every 5 minutes.
+workflowSchedule:
+  uptime: "2,32 * * * *"
 
 assignees:
   - nathanmillar16
