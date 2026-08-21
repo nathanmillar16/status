@@ -2,9 +2,14 @@ owner: nathanmillar16
 repo: status
 user-agent: nathanmillar16
 
-# Only the scoped Vercel automation bypass needed by Little Rose is exposed.
+# Only the scoped Vercel bypass and Home Assistant notification values needed
+# by the monitor are exposed to the generated workflows.
 secrets:
   - LITTLE_ROSE_VERCEL_BYPASS
+  - NOTIFICATION_CUSTOM_WEBHOOK
+  - NOTIFICATION_CUSTOM_WEBHOOK_URL
+  - NOTIFICATIONS_DOWN_MESSAGE
+  - NOTIFICATIONS_UP_MESSAGE
 
 # Add future customer-facing applications here to keep one shared status page.
 sites:
