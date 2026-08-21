@@ -94,19 +94,19 @@
     "url": "https://www.littlerose.shop/",
     "icon": "https://icons.duckduckgo.com/ip3/www.littlerose.shop.ico",
     "slug": "little-rose",
-    "status": "down",
-    "uptime": "51.35%",
-    "uptimeDay": "51.35%",
-    "uptimeWeek": "51.35%",
-    "uptimeMonth": "51.35%",
-    "uptimeYear": "51.35%",
-    "time": 180,
-    "timeDay": 180,
-    "timeWeek": 180,
-    "timeMonth": 180,
-    "timeYear": 180,
+    "status": "up",
+    "uptime": "11.87%",
+    "uptimeDay": "11.87%",
+    "uptimeWeek": "11.87%",
+    "uptimeMonth": "11.87%",
+    "uptimeYear": "11.87%",
+    "time": 402,
+    "timeDay": 402,
+    "timeWeek": 402,
+    "timeMonth": 402,
+    "timeYear": 402,
     "dailyMinutesDown": {
-      "2026-08-21": 0
+      "2026-08-21": 2
     }
   }
 ]
