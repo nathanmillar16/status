@@ -2,7 +2,13 @@ owner: nathanmillar16
 repo: status
 user-agent: nathanmillar16
 
-secrets: []
+# The portfolio has a separate five-minute checker, so it needs the same
+# notification values as the full monitor to send incidents and recoveries.
+secrets:
+  - NOTIFICATION_CUSTOM_WEBHOOK
+  - NOTIFICATION_CUSTOM_WEBHOOK_URL
+  - NOTIFICATIONS_DOWN_MESSAGE
+  - NOTIFICATIONS_UP_MESSAGE
 
 # Used by the portfolio-only workflow so this static endpoint can be checked
 # frequently without also waking the client portal database.
