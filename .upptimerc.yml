@@ -2,8 +2,9 @@ owner: nathanmillar16
 repo: status
 user-agent: nathanmillar16
 
-# No private application credentials are passed to monitoring workflows.
-secrets: []
+# Only the scoped Vercel automation bypass needed by Little Rose is exposed.
+secrets:
+  - LITTLE_ROSE_VERCEL_BYPASS
 
 # Add future customer-facing applications here to keep one shared status page.
 sites:
@@ -36,6 +37,14 @@ sites:
   - name: Leedon
     slug: leedon
     url: https://www.leedon.co.uk/
+    expectedStatusCodes:
+      - 200
+
+  - name: Little Rose
+    slug: little-rose
+    url: https://www.littlerose.shop/
+    headers:
+      - "x-vercel-protection-bypass: $LITTLE_ROSE_VERCEL_BYPASS"
     expectedStatusCodes:
       - 200
 
