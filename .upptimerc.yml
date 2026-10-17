@@ -53,6 +53,21 @@ sites:
     expectedStatusCodes:
       - 200
 
+  - name: Brevo
+    slug: brevo
+    url: https://status.brevo.com/api/v2/status.json
+    __dangerous__body_down_if_regex_missing: '"indicator"\s*:\s*"none"'
+
+  - name: Vercel
+    slug: vercel
+    url: https://www.vercel-status.com/api/v2/status.json
+    __dangerous__body_down_if_regex_missing: '"indicator"\s*:\s*"none"'
+
+  - name: Cloudflare
+    slug: cloudflare
+    url: https://www.cloudflarestatus.com/api/v2/status.json
+    __dangerous__body_down_if_regex_missing: '"indicator"\s*:\s*"none"'
+
 # The full check includes Neon and all customer-facing applications, so run it
 # every 30 minutes to keep traffic modest and leave room for the database to
 # scale to zero. A separate workflow checks the portfolio website every
