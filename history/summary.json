@@ -132,18 +132,20 @@
     "url": "https://www.vercel-status.com/api/v2/status.json",
     "icon": "https://icons.duckduckgo.com/ip3/www.vercel-status.com.ico",
     "slug": "vercel",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.97%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 178,
-    "timeDay": 218,
-    "timeWeek": 178,
-    "timeMonth": 178,
-    "timeYear": 178,
-    "dailyMinutesDown": {}
+    "time": 160,
+    "timeDay": 123,
+    "timeWeek": 160,
+    "timeMonth": 160,
+    "timeYear": 160,
+    "dailyMinutesDown": {
+      "2026-10-23": 0
+    }
   },
   {
     "name": "Cloudflare",
@@ -162,7 +164,7 @@
     "timeMonth": 84,
     "timeYear": 84,
     "dailyMinutesDown": {
-      "2026-10-23": 48,
+      "2026-10-23": 1006,
       "2026-10-22": 1440,
       "2026-10-21": 1440,
       "2026-10-20": 1440,
