@@ -1,7 +1,7 @@
 url: https://status.brevo.com/api/v2/status.json
-status: up
+status: down
 code: 200
-responseTime: 220
-lastUpdated: 2026-10-25T23:06:14.573Z
+responseTime: 183
+lastUpdated: 2026-10-26T05:47:19.725Z
 startTime: 2026-10-17T21:18:53.674Z
 generator: Upptime <https://github.com/upptime/upptime>
